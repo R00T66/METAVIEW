@@ -140,6 +140,9 @@ return {
           end
           if Class == "Player" or Class:lower() == "player" then
               Target = Args[1]
+              if DebugMode then
+                 warn("Debug", "[TARGET FLAG]", tostring(Target))
+              end
           end
        end
     end
