@@ -131,7 +131,7 @@ return {
               Class = Args[1].ClassName
           end)
           if DebugMode then
-             warn("Debug", "[CLASS FLAG]", tostring(Enabled))
+             warn("Debug", "[CLASS FLAG]", tostring(Class))
              warn("Debug", "[ARGUMENT FLAG]", tostring(Args[1]))
           end
           if Class == nil then
