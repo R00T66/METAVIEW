@@ -1,0 +1,13 @@
+-- loading
+
+repeat wait() until game.IsLoaded
+repeat wait() until game.Players.LocalPlayer
+
+-- runtime
+
+local RunTime = loadstring(game:HttpGet("https://raw.githubusercontent.com/R00T66/METAVIEW/main/Assets/RunTime"))()
+local Toggle = RunTime["Toggle"]
+
+-- placeholder, for now.
+
+Toggle("Player", {game.Players.LocalPlayer})
