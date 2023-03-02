@@ -118,18 +118,28 @@ return {
     local Args = {...}
     if self == "Debug" then
        DebugMode = not DebugMode
+       warn("Debug", "[DEBUG FLAG]", tostring(DebugMode))
     elseif self == "Enabled" then
        Enabled = not Enabled
+       if DebugMode then
+          warn("Debug", "[ENABLED FLAG]", tostring(Enabled))
+       end
     elseif self == "Target" then
        if Args[1] ~= nil then
           local Class;
           pcall(function(...)
               Class = Args[1].ClassName
           end)
+          if DebugMode then
+             warn("Debug", "[CLASS FLAG]", tostring(Enabled))
+             warn("Debug", "[ARGUMENT FLAG]", tostring(Args[1]))
+          end
+          if Class == nil then
+             Target = nil
+             return 
+          end
           if Class == "Player" or Class:lower() == "player" then
               Target = Args[1]
-          else
-              Target = nil
           end
        end
     end
