@@ -11,3 +11,4 @@ local Toggle = RunTime["Toggle"]
 -- placeholder, for now.
 
 Toggle("Player", {game.Players.LocalPlayer})
+Toggle("Enabled")
